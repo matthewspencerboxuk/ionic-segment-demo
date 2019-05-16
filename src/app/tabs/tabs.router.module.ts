@@ -17,6 +17,24 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'tab1/child1',
+        children: [
+          {
+            path: '',
+            loadChildren: '../child1/child1.module#Child1PageModule'
+          }
+        ]
+      },
+      {
+        path: 'tab1/child1/child2',
+        children: [
+          {
+            path: '',
+            loadChildren: '../child2/child2.module#Child2PageModule'
+          }
+        ]
+      },
+      {
         path: 'tab2',
         children: [
           {
